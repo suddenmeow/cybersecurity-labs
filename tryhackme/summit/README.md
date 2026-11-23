@@ -78,7 +78,16 @@ The exercise was conducted through the browser-based TryHackMe Summit environmen
 
 The exercises were performed within an authorized simulation. No production systems were modified.
 
-**Evidence:** `01-lab-introduction.png`, `02-security-tools.png`
+**Evidence:** [`01-lab-introduction.png`](screenshots/01-lab-introduction.png), [`02-security-tools.png`](screenshots/02-security-tools.png)
+
+![Initial adversary message introducing the PicoSecure investigation](screenshots/01-lab-introduction.png)
+
+*Figure 1. Initial adversary message introducing the PicoSecure investigation*
+
+![PicoSecure security tools available during the engagement](screenshots/02-security-tools.png)
+
+*Figure 2. PicoSecure security tools available during the engagement*
+
 
 ## 4. Investigation Overview
 
@@ -162,13 +171,29 @@ Consequently, hash-based detection is useful for known threats but insufficient 
 
 **Evidence:**
 
-- `03-sample1-analysis.png` — Malware sandbox analysis
+- [`03-sample1-analysis.png`](screenshots/03-sample1-analysis.png) — Malware sandbox analysis
 
-- `04-md5-detection-rule.png` — Hash blocklist configuration
+- [`04-md5-detection-rule.png`](screenshots/04-md5-detection-rule.png) — Hash blocklist configuration
 
-- `05-sample1-detection-success.png` — Successful prevention confirmation
+- [`05-sample1-detection-success.png`](screenshots/05-sample1-detection-success.png) — Successful prevention confirmation
 
-- `challenge-1-completed.png` — Adversary response
+- [`challenge-1-completed.png`](screenshots/challenge-1-completed.png) — Adversary response
+
+
+### Selected screenshots
+
+![Malware Sandbox analysis of sample1.exe with malicious behavior and MD5 indicator](screenshots/03-sample1-analysis.png)
+
+*Figure 3. Malware Sandbox analysis of sample1.exe with malicious behavior and MD5 indicator*
+
+![Hash-based detection configuration in Manage Hashes](screenshots/04-md5-detection-rule.png)
+
+*Figure 4. Hash-based detection configuration in Manage Hashes*
+
+![PicoSecure confirms prevention of sample1.exe execution](screenshots/05-sample1-detection-success.png)
+
+*Figure 5. PicoSecure confirms prevention of sample1.exe execution*
+
 
 ---
 
@@ -233,13 +258,25 @@ The next stage of the exercise demonstrated this weakness when Sphinx switched t
 
 **Evidence:**
 
-- `06-sample2-network-analysis.png` — Suspicious network connection identified
+- [`06-sample2-network-analysis.png`](screenshots/06-sample2-network-analysis.png) — Suspicious network connection identified
 
-- `07-egress-firewall-rule-1.png` — Firewall rule configuration
+- [`07-egress-firewall-rule-1.png`](screenshots/07-egress-firewall-rule-1.png) — Firewall rule configuration
 
-- `07-egress-firewall-rule-2.png` — Firewall rule successfully saved
+- [`07-egress-firewall-rule-2.png`](screenshots/07-egress-firewall-rule-2.png) — Firewall rule successfully saved
 
-- `08-firewall-detection-success.png` — Adversary response confirming the block
+- [`08-firewall-detection-success.png`](screenshots/08-firewall-detection-success.png) — Adversary response confirming the block
+
+
+### Selected screenshots
+
+![Network activity reveals outbound communication to the suspicious destination](screenshots/06-sample2-network-analysis.png)
+
+*Figure 6. Network activity reveals outbound communication to the suspicious destination*
+
+![Saved egress firewall rule denies communication to the identified C2 IP](screenshots/07-egress-firewall-rule-2.png)
+
+*Figure 7. Saved egress firewall rule denies communication to the identified C2 IP*
+
 
 ---
 
@@ -294,13 +331,25 @@ This challenge reinforced the importance of combining DNS filtering with other s
 
 **Evidence:**
 
-- `09-sample3-dns-analysis.png` — Sandbox network and DNS activity
+- [`09-sample3-dns-analysis.png`](screenshots/09-sample3-dns-analysis.png) — Sandbox network and DNS activity
 
-- `10-dns-blocking-rule-1.png` — DNS rule configuration
+- [`10-dns-blocking-rule-1.png`](screenshots/10-dns-blocking-rule-1.png) — DNS rule configuration
 
-- `10-dns-blocking-rule-2.png` — Successful DNS filtering confirmation
+- [`10-dns-blocking-rule-2.png`](screenshots/10-dns-blocking-rule-2.png) — Successful DNS filtering confirmation
 
-- `challenge-3-completed.png` — Adversary response
+- [`challenge-3-completed.png`](screenshots/challenge-3-completed.png) — Adversary response
+
+
+### Selected screenshots
+
+![Sandbox reveals DNS and HTTP connections associated with the suspicious domain](screenshots/09-sample3-dns-analysis.png)
+
+*Figure 8. Sandbox reveals DNS and HTTP connections associated with the suspicious domain*
+
+![DNS filtering rule validated with confirmation of malicious domain blocking](screenshots/10-dns-blocking-rule-2.png)
+
+*Figure 9. DNS filtering rule validated with confirmation of malicious domain blocking*
+
 
 ---
 
@@ -384,17 +433,33 @@ However, legitimate administrative activity can also modify security settings. I
 
 **Evidence:**
 
-- `11-sample4-registry-analysis-1.png` — Sandbox behavioral analysis
+- [`11-sample4-registry-analysis-1.png`](screenshots/11-sample4-registry-analysis-1.png) — Sandbox behavioral analysis
 
-- `11-sample4-registry-analysis-2.png` — Registry modification evidence
+- [`11-sample4-registry-analysis-2.png`](screenshots/11-sample4-registry-analysis-2.png) — Registry modification evidence
 
-- `12-registry-sigma-rule-1.png` — Initial Sigma Rule Builder view
+- [`12-registry-sigma-rule-1.png`](screenshots/12-registry-sigma-rule-1.png) — Initial Sigma Rule Builder view
 
-- `12-registry-sigma-rule-2.png` — Detection rule configuration
+- [`12-registry-sigma-rule-2.png`](screenshots/12-registry-sigma-rule-2.png) — Detection rule configuration
 
-- `13-registry-rule-validation.png` — Successfully validated rule
+- [`13-registry-rule-validation.png`](screenshots/13-registry-rule-validation.png) — Successfully validated rule
 
-- `challenge-4-completed.png` — Adversary response
+- [`challenge-4-completed.png`](screenshots/challenge-4-completed.png) — Adversary response
+
+
+### Selected screenshots
+
+![Registry activity shows modification of DisableRealtimeMonitoring to value 1](screenshots/11-sample4-registry-analysis-2.png)
+
+*Figure 10. Registry activity shows modification of DisableRealtimeMonitoring to value 1*
+
+![Sysmon registry modification detection configuration and ATT&CK mapping](screenshots/12-registry-sigma-rule-2.png)
+
+*Figure 11. Sysmon registry modification detection configuration and ATT&CK mapping*
+
+![Validated Sigma-style detection for Windows Defender registry modification](screenshots/13-registry-rule-validation.png)
+
+*Figure 12. Validated Sigma-style detection for Windows Defender registry modification*
+
 
 ---
 
@@ -477,15 +542,31 @@ Consequently, beaconing detections require contextual analysis and false-positiv
 
 **Evidence:**
 
-- `14-network-beaconing-logs.png` — Outbound connections demonstrating the repeating pattern
+- [`14-network-beaconing-logs.png`](screenshots/14-network-beaconing-logs.png) — Outbound connections demonstrating the repeating pattern
 
-- `15-beaconing-sigma-rule-1.png` — Detection configuration
+- [`15-beaconing-sigma-rule-1.png`](screenshots/15-beaconing-sigma-rule-1.png) — Detection configuration
 
-- `15-beaconing-sigma-rule-2.png` — Completed rule parameters
+- [`15-beaconing-sigma-rule-2.png`](screenshots/15-beaconing-sigma-rule-2.png) — Completed rule parameters
 
-- `16-beaconing-detection-success.png` — Validated and deployed rule
+- [`16-beaconing-detection-success.png`](screenshots/16-beaconing-detection-success.png) — Validated and deployed rule
 
-- `challenge-5-completed.png` — Adversary response
+- [`challenge-5-completed.png`](screenshots/challenge-5-completed.png) — Adversary response
+
+
+### Selected screenshots
+
+![Outgoing connection logs reveal repeated 97-byte traffic at 30-minute intervals](screenshots/14-network-beaconing-logs.png)
+
+*Figure 13. Outgoing connection logs reveal repeated 97-byte traffic at 30-minute intervals*
+
+![Network behavior rule uses Any remote IP and port with 97 bytes and 1800 seconds](screenshots/15-beaconing-sigma-rule-2.png)
+
+*Figure 14. Network behavior rule uses Any remote IP and port with 97 bytes and 1800 seconds*
+
+![Validated and deployed network beacon detection rule](screenshots/16-beaconing-detection-success.png)
+
+*Figure 15. Validated and deployed network beacon detection rule*
+
 
 ---
 
@@ -598,15 +679,35 @@ Such an approach would remain more effective if the attacker renamed the staging
 
 **Evidence:**
 
-- `17-attacker-commands-log.png` — Attacker command history
+- [`17-attacker-commands-log.png`](screenshots/17-attacker-commands-log.png) — Attacker command history
 
-- `18-file-creation-sigma-rule-1.png` — Detection builder configuration
+- [`18-file-creation-sigma-rule-1.png`](screenshots/18-file-creation-sigma-rule-1.png) — Detection builder configuration
 
-- `18-file-creation-sigma-rule-2.png` — File creation and modification rule
+- [`18-file-creation-sigma-rule-2.png`](screenshots/18-file-creation-sigma-rule-2.png) — File creation and modification rule
 
-- `19-ttp-detection-success.png` — Successful validation and completion confirmation
+- [`19-ttp-detection-success.png`](screenshots/19-ttp-detection-success.png) — Successful validation and completion confirmation
 
-- `20-summit-completed.png` — Final adversary message
+- [`20-summit-completed.png`](screenshots/20-summit-completed.png) — Final adversary message
+
+
+### Selected screenshots
+
+![Recorded system discovery commands append output to a shared temporary log](screenshots/17-attacker-commands-log.png)
+
+*Figure 16. Recorded system discovery commands append output to a shared temporary log*
+
+![File monitoring rule targets exfiltr8.log inside the temporary directory](screenshots/18-file-creation-sigma-rule-2.png)
+
+*Figure 17. File monitoring rule targets exfiltr8.log inside the temporary directory*
+
+![Successful validation of the final file activity detection rule](screenshots/19-ttp-detection-success.png)
+
+*Figure 18. Successful validation of the final file activity detection rule*
+
+![Final adversary acknowledgment after completing all six challenges](screenshots/20-summit-completed.png)
+
+*Figure 19. Final adversary acknowledgment after completing all six challenges*
+
 
 ---
 
@@ -751,15 +852,15 @@ A total of 31 screenshots were collected to document the investigation, detectio
 
 | Section      | Evidence files                                                                                                                                                                                             |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Introduction | `01-lab-introduction.png`, `02-security-tools.png`                                                                                                                                                         |
-| Challenge 1  | `03-sample1-analysis.png`, `04-md5-detection-rule.png`, `05-sample1-detection-success.png`, `challenge-1-completed.png`                                                                                    |
-| Challenge 2  | `06-sample2-network-analysis.png`, `07-egress-firewall-rule-1.png`, `07-egress-firewall-rule-2.png`, `08-firewall-detection-success.png`, `challenge-2-completed.png`                                      |
-| Challenge 3  | `09-sample3-dns-analysis.png`, `10-dns-blocking-rule-1.png`, `10-dns-blocking-rule-2.png`, `challenge-3-completed.png`                                                                                     |
-| Challenge 4  | `11-sample4-registry-analysis-1.png`, `11-sample4-registry-analysis-2.png`, `12-registry-sigma-rule-1.png`, `12-registry-sigma-rule-2.png`, `13-registry-rule-validation.png`, `challenge-4-completed.png` |
-| Challenge 5  | `14-network-beaconing-logs.png`, `15-beaconing-sigma-rule-1.png`, `15-beaconing-sigma-rule-2.png`, `16-beaconing-detection-success.png`, `challenge-5-completed.png`                                       |
-| Challenge 6  | `17-attacker-commands-log.png`, `18-file-creation-sigma-rule-1.png`, `18-file-creation-sigma-rule-2.png`, `19-ttp-detection-success.png`, `20-summit-completed.png`                                        |
+| Introduction | [`01-lab-introduction.png`](screenshots/01-lab-introduction.png), [`02-security-tools.png`](screenshots/02-security-tools.png)                                                                                                                                                         |
+| Challenge 1  | [`03-sample1-analysis.png`](screenshots/03-sample1-analysis.png), [`04-md5-detection-rule.png`](screenshots/04-md5-detection-rule.png), [`05-sample1-detection-success.png`](screenshots/05-sample1-detection-success.png), [`challenge-1-completed.png`](screenshots/challenge-1-completed.png)                                                                                    |
+| Challenge 2  | [`06-sample2-network-analysis.png`](screenshots/06-sample2-network-analysis.png), [`07-egress-firewall-rule-1.png`](screenshots/07-egress-firewall-rule-1.png), [`07-egress-firewall-rule-2.png`](screenshots/07-egress-firewall-rule-2.png), [`08-firewall-detection-success.png`](screenshots/08-firewall-detection-success.png), [`challenge-2-completed.png`](screenshots/challenge-2-completed.png)                                      |
+| Challenge 3  | [`09-sample3-dns-analysis.png`](screenshots/09-sample3-dns-analysis.png), [`10-dns-blocking-rule-1.png`](screenshots/10-dns-blocking-rule-1.png), [`10-dns-blocking-rule-2.png`](screenshots/10-dns-blocking-rule-2.png), [`challenge-3-completed.png`](screenshots/challenge-3-completed.png)                                                                                     |
+| Challenge 4  | [`11-sample4-registry-analysis-1.png`](screenshots/11-sample4-registry-analysis-1.png), [`11-sample4-registry-analysis-2.png`](screenshots/11-sample4-registry-analysis-2.png), [`12-registry-sigma-rule-1.png`](screenshots/12-registry-sigma-rule-1.png), [`12-registry-sigma-rule-2.png`](screenshots/12-registry-sigma-rule-2.png), [`13-registry-rule-validation.png`](screenshots/13-registry-rule-validation.png), [`challenge-4-completed.png`](screenshots/challenge-4-completed.png) |
+| Challenge 5  | [`14-network-beaconing-logs.png`](screenshots/14-network-beaconing-logs.png), [`15-beaconing-sigma-rule-1.png`](screenshots/15-beaconing-sigma-rule-1.png), [`15-beaconing-sigma-rule-2.png`](screenshots/15-beaconing-sigma-rule-2.png), [`16-beaconing-detection-success.png`](screenshots/16-beaconing-detection-success.png), [`challenge-5-completed.png`](screenshots/challenge-5-completed.png)                                       |
+| Challenge 6  | [`17-attacker-commands-log.png`](screenshots/17-attacker-commands-log.png), [`18-file-creation-sigma-rule-1.png`](screenshots/18-file-creation-sigma-rule-1.png), [`18-file-creation-sigma-rule-2.png`](screenshots/18-file-creation-sigma-rule-2.png), [`19-ttp-detection-success.png`](screenshots/19-ttp-detection-success.png), [`20-summit-completed.png`](screenshots/20-summit-completed.png)                                        |
 
-**Evidence publication status:** All 31 screenshots were captured and prepared in a separate GitHub upload package with challenge flags redacted. The image files are not yet in the repository; the paths listed below are the intended `screenshots/` filenames.
+**Evidence status:** All 31 screenshots are now available in the repository's [`screenshots/` folder](screenshots/). Selected screenshots appear above with captions, while the evidence index links to every image. Challenge flags in the public evidence have been redacted.
 
 # References
 
