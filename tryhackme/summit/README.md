@@ -180,8 +180,6 @@ Consequently, hash-based detection is useful for known threats but insufficient 
 - [`challenge-1-completed.png`](screenshots/challenge-1-completed.png) — Adversary response
 
 
-### Selected screenshots
-
 ![Malware Sandbox analysis of sample1.exe with malicious behavior and MD5 indicator](screenshots/03-sample1-analysis.png)
 
 *Figure 3. Malware Sandbox analysis of sample1.exe with malicious behavior and MD5 indicator*
@@ -267,8 +265,6 @@ The next stage of the exercise demonstrated this weakness when Sphinx switched t
 - [`08-firewall-detection-success.png`](screenshots/08-firewall-detection-success.png) — Adversary response confirming the block
 
 
-### Selected screenshots
-
 ![Network activity reveals outbound communication to the suspicious destination](screenshots/06-sample2-network-analysis.png)
 
 *Figure 6. Network activity reveals outbound communication to the suspicious destination*
@@ -339,8 +335,6 @@ This challenge reinforced the importance of combining DNS filtering with other s
 
 - [`challenge-3-completed.png`](screenshots/challenge-3-completed.png) — Adversary response
 
-
-### Selected screenshots
 
 ![Sandbox reveals DNS and HTTP connections associated with the suspicious domain](screenshots/09-sample3-dns-analysis.png)
 
@@ -446,8 +440,6 @@ However, legitimate administrative activity can also modify security settings. I
 - [`challenge-4-completed.png`](screenshots/challenge-4-completed.png) — Adversary response
 
 
-### Selected screenshots
-
 ![Registry activity shows modification of DisableRealtimeMonitoring to value 1](screenshots/11-sample4-registry-analysis-2.png)
 
 *Figure 10. Registry activity shows modification of DisableRealtimeMonitoring to value 1*
@@ -552,8 +544,6 @@ Consequently, beaconing detections require contextual analysis and false-positiv
 
 - [`challenge-5-completed.png`](screenshots/challenge-5-completed.png) — Adversary response
 
-
-### Selected screenshots
 
 ![Outgoing connection logs reveal repeated 97-byte traffic at 30-minute intervals](screenshots/14-network-beaconing-logs.png)
 
@@ -689,8 +679,6 @@ Such an approach would remain more effective if the attacker renamed the staging
 
 - [`20-summit-completed.png`](screenshots/20-summit-completed.png) — Final adversary message
 
-
-### Selected screenshots
 
 ![Recorded system discovery commands append output to a shared temporary log](screenshots/17-attacker-commands-log.png)
 
